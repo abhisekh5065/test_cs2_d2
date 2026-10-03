@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Application Page</h3>
+    <form action="home.html" method="post">
+        <label>First Name</label>
+    <input type="text" name="first_name"/><br/>
+        <label>Last Name</label>
+    <input type="text" name="last_name"/><br/>
+        <label>Gender</label>
+    <input type="radio" name="gender" value="male"/>: Male
+    <input type="radio" name="gender" value="female"/> :Female<br/>
+        <label>Hobbies</label>
+    <input type="checkbox" name="hobbies" value="reading"/>: Reading
+    <input type="checkbox" name="hobbies" value="writing"/> :Writing<br/>
+    <label>City</label>
+    <select name="city">
+        <option>--Select City--</option>
+        <option value="newyork">New York</option>
+        <option value="london">London</option>
+        <option value="tokyo">Tokyo</option>
+    </select>
+    <br/>
+    <label>DOB</label>
+    <input type="datetime-local" name="dob"/><br/>
+    <br/>
+    <label>Address</label>
+    <textarea name="address" rows="6" cols="30"></textarea>
+
+    </textarea>
+    <br/>
+    <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
