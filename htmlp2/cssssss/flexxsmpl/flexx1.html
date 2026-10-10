@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 30px;
+}
+
+.cart {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* FLEX CONTAINER */
+.cart-item {
+
+    display: flex;
+
+    /* Horizontal arrangement */
+    flex-direction: row;
+
+    /* Vertical alignment */
+    align-items: center;
+
+    /* Space between children */
+    gap: 20px;
+
+    /* Space around the complete item */
+    padding: 10px;
+
+    margin-bottom: 15px;
+
+    background-color: rgb(221, 216, 216);
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+}
+
+/* Take remaining available space */
+.product-info {
+    flex: 1;
+}
+
+.product-info h2 {
+    margin: 0 0 8px 0;
+}
+
+.product-info p {
+    color: #666;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.quantity {
+    white-space: nowrap;
+}
+
+.cart-item button {
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #dc3545;
+    color: white;
+
+    cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+
+    <h1>Shopping Cart</h1>
+
+    <div class="cart">
+
+        <div class="cart-item">
+
+            <div class="product-info">
+                <h2>HP Laptop</h2>
+                <p>Intel Core i5 | 16GB RAM | 512GB SSD</p>
+            </div>
+
+            <div class="price">
+                $5,999
+            </div>
+
+            <div class="quantity">
+                Qty: 1
+            </div>
+
+            <button>Remove</button>
+
+        </div>
+
+
+        <div class="cart-item">
+
+            <div class="product-info">
+                <h2>Wireless Mouse</h2>
+                <p>Bluetooth Wireless Mouse</p>
+            </div>
+
+            <div class="price">
+                $129.99
+            </div>
+
+            <div class="quantity">
+                Qty: 2
+            </div>
+
+            <button>Remove</button>
+
+        </div>
+
+
+        <div class="cart-item">
+
+            <div class="product-info">
+                <h2>Keyboard</h2>
+                <p>Wireless Mechanical Keyboard</p>
+            </div>
+
+            <div class="price">
+                $249.99
+            </div>
+
+            <div class="quantity">
+                Qty: 1
+            </div>
+
+            <button>Remove</button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
