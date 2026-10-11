@@ -15,22 +15,20 @@
 <body>
 
     <script>
-
         let id = 100
-
         let name = "Raj Deep"
-
         let age = 21;
-
         let departmentName = "Computer Science";
-
+        document.write("<div style='border: 5px solid red; padding: 10px; width: 300px;'>");
         document.write("Id: " + id + "<br>");
-
         document.write("Name: " + name + "<br>");
-
         document.write("Age: " + age + "<br>");
-
         document.write("Department Name: " + departmentName + "<br>");
+        document.write("</div>");
+
+        let topp = age>18 ? "Can apply" : "Can`t apply";
+        let topp1 = (age>18 && age<60) ? "Can apply for it" : "Can`t apply for it";
+        document.write(age+"***"+topp1);
 
     </script>
 
