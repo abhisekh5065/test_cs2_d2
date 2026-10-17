@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <h2>Callback function</h2>
+
+    <script>
+
+        function greetPerson(fname,callback){
+
+                return "Welcome "+callback(fname)
+
+        }
+
+        let maleInfo = function(fname){
+
+            return "Mr "+fname
+
+        }
+
+        let femaleInfo = (fname)=>"Miss "+fname
+
+        document.write("<br/> "+greetPerson("aa",maleInfo))
+
+        document.write("<br/> "+greetPerson("bb",femaleInfo))
+
+        document.write("<br/>"+greetPerson("cc",function(fname){
+
+            return "Mr "+fname
+
+        }))
+
+        document.write("<br/> "+greetPerson("dd",(fname)=>"Miss "+fname))
+
+    </script>
+
+</body>
+
+</html>

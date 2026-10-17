@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>User defined function</h2>
+    <script>
+        // normal function no passing parameter and no return value 
+        function greet() {
+            alert("Welcome to user defined function")
+        }
+        //greet()
+        // function passing parameter 
+        function addNumber(a,b){
+            let sum = a+b
+            alert("Sum of two number inside a function "+sum)
+        }
+        //addNumber(10,20)
+        // function passing parameter and return value 
+        function checkLogin(emailId,password){
+            if(emailId==="admin@gmail.com" && password==="admin@123"){
+                return "successfully login";
+            }else {
+                return "failure try once again"
+            }
+        }
+        let result = checkLogin("admin@gmail.com","admin@123")
+        //alert("Result in outside function "+result)
+
+             display1()
+        // Normal function it support js hosting 
+        function display1(){
+            document.write("<br/> Normal Function2 <br/>")
+        }
+        display1()
+        //display2()        we can't call 
+
+        // expression function it doesn't support js hosting 
+        let display2 = function() {
+            document.write("<br/> Expression type function<br/>")
+        }
+        display2();
+
+        // // addition of two number using expression 
+        // let addNumber1 = function(a,b){
+        //     let sum = a+b
+        //     return sum
+        // }
+        // let result1 = addNumber1(10,20)
+        // document.write("Addition of two number using expression style "+result1)
+        // // addition of two number using arrow style 
+        // let addNumber2 = (a,b)=>a+b
+        // let result2 = addNumber2(10,20)
+        // document.write("<br/>Addition of two number using arrow style "+result2)
+
+        // arrow no passing parameter no return type 
+        let welcome = ()=>document.write("<br/> Welcome to Arrow function no passing parameter <br/>")
+        
+        // function welcome() {
+        //
+        //}
+        // calling function 
+        welcome();
+        // arrow function passing parameter 
+        let add11 = (a,b)=>document.write(a+b)
+        //  function add(a,b){
+        //  document.write(a+b)
+        //}
+        //
+        add11(10,20)
+        // arrow function passing parameter and return value without return keyword. 
+        let addNumber11 = (a,b)=>a+b
+        let result1 = addNumber11(100,200)
+        document.write("<br/> Addition of two number using arrow "+result1)
+
+        // find largest of two number using expression 
+        let findLargest1 = function(a,b){
+            if(a>b){
+                return "a is largest"
+            }else {
+                return "b is largest"
+            }
+        }
+        let result2 = findLargest1(10,20)
+        // find largest of two number using arrow 
+        let findLargest2 = (a,b)=>{
+            if(a>b){
+                return "a is largest"
+            }else {
+                return "b is largest"
+            }
+        }
+        let result3 = findLargest1(10,20)
+        document.write("<br/> Largest of two number using expression style "+result2)
+        document.write("<br/> Largest of two number using arrow style "+result3)
+    </script>
+</body>
+</html>
