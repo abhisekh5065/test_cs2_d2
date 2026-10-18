@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Array Object Operation</h2>
+    <script>
+        //Array object
+        // creating array object using literal style 
+        let num2 = [100,200,300,400,500,600]
+        document.write("<br/>Value of num2 is "+num2) // display data in string format separated by , 
+        document.write("<br/> Access particular value using index "+num2[0]) // 100
+        document.write("<br/> Size of num2 array "+num2.length) // 6 
+        num2.push(700); 
+        num2.push(800,900);    // it add at last       tail 
+        num2.unshift(1000)  // it add at the start position head  
+        document.write("<br/>Value of num2 is "+num2)
+        num2.pop();     // remove from last 
+        num2.shift()    // remove from starting position 
+        document.write("<br/>Value of num2 is "+num2)
+        num2.splice(2,1); //remove 1 element from 2nd posation 
+        document.write("<br/>Value of num2 is "+num2)
+        num2.splice(2,0,44) //add 44 after 3rd posation
+        document.write("<br/>Value of num2 is "+num2)
+        num2.splice(3,0,11,22,33) //add multiple elements after 4th posation
+        document.write("<br/>Value of num2 is "+num2)
+
+        let names = ["Raj","John","Mahesh"]
+        document.write("<br/> Using for loop")
+        for(let i=0;i<names.length;i++){
+            document.write("<br/>Name is "+names[i])
+        }
+        document.write("<br/> for of loop")
+        for(let name of names){
+            document.write("<br/>Name is "+name)
+        }
+        document.write("<br/> for in loop")
+        for(let index in names){
+            document.write("<br/> Index "+index+" Value is "+names[index])
+        }
+
+        //string object
+        let msg1 = "Welcome to JavaScript Training";
+        let msg2 = new String("Welcome to JavaScript Training");
+        document.write("<br/> Value is "+msg1)
+        document.write("<br/> Value is "+msg2)
+        document.write("<br/> Number of character : "+msg1.length)
+        document.write("<br/> Upper Case :  "+msg1.toUpperCase())
+        document.write("<br/> Lower Case : "+msg1.toLowerCase())
+        document.write("<br/> Sub String : "+msg1.substring(10))
+        document.write("<br/> Sub String : "+msg1.substring(10,21))
+        document.write("<br/> Replace : "+msg1.replace("JavaScript","Python"))
+
+        //Math object
+        document.write("<br/>"+Math.E)
+        document.write("<br/>"+Math.sqrt(64));    // 8
+        document.write("<br/>"+Math.max(10, 25, 5)); // 25
+        document.write("<br/>"+Math.round(4.6));  // 5
+        document.write("<br/>"+Math.floor(4.9));  // 4
+        document.write("<br/>"+Math.ceil(4.1));   // 5
+        document.write("<br/>"+Math.PI);
+
+        //Date object
+        const today = new Date();
+        document.write(today)
+        document.write("<br/> Date "+today.getDate())
+        document.write("<br/> Month "+today.getMonth())
+        today.setMonth(today.getMonth()+1);
+        document.write("<br/> Month "+today.getMonth())
+        document.write("<br/> Year "+today.getFullYear())
+        document.write("<br/> Hour "+today.getHours())
+        document.write("<br/> Minute "+today.getMinutes())
+        document.write("<br/> Second "+today.getSeconds())
+
+    </script>
+</body>
+</html>
