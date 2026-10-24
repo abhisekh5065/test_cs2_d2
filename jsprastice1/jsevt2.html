@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            function addNumber() {
+                let firstNumber = document.getElementById("n1").value
+                let secondNumber = document.getElementById("n2").value
+                let sum = eval(firstNumber)+eval(secondNumber)
+                let resultField = document.getElementById("n3")
+                resultField.value=sum
+                let divField = document.getElementById("output")
+                divField.innerHTML=sum
+                document.getElementById("n1").value=""
+                document.getElementById("n2").value=""
+                //alert(sum)
+            }
+    </script>
+</head>
+<body>
+    <form>
+        <label>1st Number:</label>
+            <input type="number" name="first_number" id="n1"/><br/>
+        <label>2nd Number:</label>
+            <input type="number" name="second_number" id="n2"/><br/>
+        <label>Result</label>
+            <input type="text" name="result" id="n3" readonly/><br/>
+        <input type="button" value="Add" id="b1" onclick="addNumber()"/>
+        <input type="button" value="Sub" id="b2"/>
+        <br/>
+        <div id="output"></div>
+    </form>
+</body>
+</html>
