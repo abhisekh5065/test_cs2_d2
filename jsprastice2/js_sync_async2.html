@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let n=0;
+        let obj
+        function displayTime() {
+                setInterval(()=> {
+                let dateInfo = document.getElementById("dateAndTime")
+                let dd = new Date();
+                dateInfo.innerHTML=dd.getHours()+":"+dd.getMinutes()+":"+dd.getSeconds()
+                },1000)       
+        }
+        function startLogic() {
+            
+           obj= setInterval(()=> {
+                let result = document.getElementById("output")
+                result.innerHTML=n
+                if(n%2==0){
+                    document.getElementsByTagName("div")[2].style.color="RED"
+                    document.getElementsByTagName("div")[2].style.backgroundColor="GREEN"
+                }else {
+                    document.getElementsByTagName("div")[2].style.color="GREEN"
+                    document.getElementsByTagName("div")[2].style.backgroundColor="RED"
+                }
+                n++;
+            },1000)
+        }
+        function stopLogic() {
+            clearInterval(obj)
+        }
+    </script>
+</head>
+<body onload="displayTime()">
+    <input type="button" value="Start" onclick="startLogic()"/>
+    <input type="button" value="Stop" onclick="stopLogic()"/>
+    <hr/>
+    <div id="output">
+
+    </div>
+    <div id="dateAndTime">
+
+    </div>
+    <div>
+        Welcome to Asynchronous Programming concept
+    </div>
+</body>
+</html>

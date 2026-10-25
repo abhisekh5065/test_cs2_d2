@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Class Style Object creation</h2>
+    <script>
+        
+        class Product {
+            pid =100
+            pname = "TV"
+            price = 55000
+            displayProductDetails(){
+                    document.write("<br/> Product details inside function")
+                    document.write("<br/> PId is "+this.pid)
+                    document.write("<br/> PName is "+this.pname)
+                    document.write("<br/> Price is "+this.price)
+            }
+        }
+        let p1 = new Product();
+        document.write("<br/> Product details")
+        document.write("<br/> Pid is "+p1.pid)
+        document.write("<br/> PName is "+p1.pname)
+        document.write("<br/> Price is "+p1.price)
+
+        class Employee1{
+            constructor(eid,ename,esal)
+            {
+                this.eid = eid
+                this.ename = ename
+                this.esal = esal
+            }
+
+            displayEmployee1(){
+                document.write("<br/> Eid "+this.eid)
+                document.write("<br/> Ename "+this.ename)
+                document.write("<br/> Esal "+this.esal)
+            }
+        }
+
+        let empp1 = new Employee1(1,"e1",11111)
+        empp1.displayEmployee1()
+        let empp2 = new Employee1(2,"e2",22222)
+        empp2.displayEmployee1()
+        //js_sync_async
+    </script>
+</body>
+</html>

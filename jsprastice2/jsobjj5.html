@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Object creation using Function style</h2>
+    <script>
+        /*function Employee() {
+                document.write("<br/> Employee object created")
+        }*/
+        //Employee()
+        //let emp1 = new Employee()       // now it is consider as object 
+        function Customer() {
+            this.cid = 100          // property this keyword. 
+            this.cname = "Raj"
+            this.age = 21
+            // let city="Bangalore"        // local property 
+            // state:"Kar"
+        }
+        let cust1 = new Customer();
+        document.write("<br/> Customer details")
+        document.write("<br/> Customer Id is "+cust1.cid)
+        document.write("<br/> Customer Name is "+cust1.cname)
+        document.write("<br/> Customer Age is "+cust1.age)
+        //document.write("<br/> Customer City is "+cust1.city)
+        //document.write("<br/> Customer City is "+cust1.state)
+
+        function Product() {
+            this.pid = 100
+            this.pname = "TV"
+            this.price = 550000
+            this.displayProduct = function() {
+                document.write("<br/> Product details")
+                document.write("<br/> Product id "+this.pid)
+                document.write("<br/> Product name "+this.pname)
+                document.write("<br/> Product price "+this.price)
+            }
+        }
+        let p1 = new Product()
+        p1.displayProduct()
+
+        function Employees(eid,ename,esal)
+        {
+            this.eid = eid
+            this.ename = ename
+            this.esal = esal
+            this.displayEmpDetails = function(){
+                document.write("<br/> Eid "+this.eid)
+                document.write("<br/> Ename "+this.ename)
+                document.write("<br/> Esal "+this.esal)
+            }
+        }
+
+        let empl1 = new Employees(111,"AAA",12345)
+        empl1.displayEmpDetails()
+
+        let empl2 = new Employees(222,"BBB",23456)
+        empl2.displayEmpDetails()
+
+    </script>
+</body>
+</html>

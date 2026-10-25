@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS Synchronous and Asynchronous Example</h2>
+    <script>
+        console.log("Synchronous Communication")
+        console.log("1st Statement")
+        console.log("2nd Statement")
+        console.log("3rd Statement")
+        console.log("----------------------")
+        console.log("Asynchronous Communication")
+        console.log("1st Statement")
+        setTimeout(()=> {
+                 console.log("2nd Statement")
+        },2000)
+        console.log("3rd Statement")
+       /*setInterval(()=> {
+                 console.log("4th Statement")
+        },1000)*/
+
+        
+    </script>
+</body>
+</html>

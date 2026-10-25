@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Custom Promise Example</h2>
+    <script>
+        let promise = new Promise((resolve,reject)=> {
+            reject("Promise rejected--Error!")
+            //resolve("Promise done successfully!")
+        })
+
+        promise.
+        then((data)=>console.log("Then block "+data)).
+        catch((error)=>console.log("Catch block "+error)).
+        finally(()=>console.log("finally block"))
+
+        console.log("Normal Statement 1")
+        console.log("Normal Statement 2")
+
+    </script>
+</body>
+</html>
