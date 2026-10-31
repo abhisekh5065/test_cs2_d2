@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        function loadPublicAPI() {
+
+          //  alert("event fired") https://jsonplaceholder.typicode.com/#get or https://dummyjson.com/recipes or https://www.themealdb.com/api/json/v1/1/categories.php
+        /*fetch("https://dummyjson.com/products")
+        .then(response=>response.json())
+        .then(result=>console.log(result.products))
+        .catch(error=>console.log(error))
+        .finally(()=>console.log("Done!"))*/
+
+         // display data on browesing area 
+        fetch("https://dummyjson.com/products")
+        .then(response=>response.json())
+        .then(result=>{
+            // productData variable hold array of products. 
+            let productData = result.products
+            // load Data one by one 
+            productData.forEach(product=> {
+                //console.log(product)
+                let divTag = document.createElement("div")
+                let divContent = document.createTextNode(product.title)
+                divTag.appendChild(divContent)
+                document.getElementsByTagName("body")[0].appendChild(divTag)
+            })
+        })
+        .catch(error=>console.log(error))
+        .finally(()=>console.log("Done!"))
+        }
+
+    </script>
+
+    <input type="button" 
+
+    value="Load Data"
+
+    onclick="loadPublicAPI()"/>
+
+</body>
+
+</html>
