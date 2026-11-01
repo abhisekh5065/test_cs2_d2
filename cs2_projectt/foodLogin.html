@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="validateLogin.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Online Food App</h1>
+        <p>Discover delicious food recipes</p>
+    </header>
+
+<main>
+    <form action="foodHome.html" onsubmit="return checkLoginDetails()">
+        <label>EmailId</label>
+        <input type="email" id="emailId" required/><br/>
+        <label>Password</label>
+        <input type="password" id="password" required/><br/>
+        <input type="submit" value="Login" id="loginBtn"/>
+        <input type="reset" value="reset" id="registerBtn"/>
+    </form>
+</main>
+    <footer class="footer">
+        <p>© 2026 Online Food App | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
